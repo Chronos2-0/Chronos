@@ -26,13 +26,11 @@ const ServiceOverview = (props) => {
     // IPC listener responsible for retrieving infomation from asynchronous main process message.
     ipcRenderer.on('overviewResponse', (event, data) => {
       // Adds to state and context.
-      console.log(JSON.parse(data));
       setOverviewState(Object.values(JSON.parse(data)));
       serviceComponents.overviewData = JSON.parse(data);
     });
   }, []);
 
-  console.log('overviewstate: ', overviewState);
   // Add routes to the display
   // Hook used to toggle whether or not the Modal component renders
   const [modalDisplay, toggleModalDisplay] = useState(false);
@@ -131,7 +129,6 @@ const ServiceOverview = (props) => {
                   healthdata.detailData = Object.values(JSON.parse(data));
                   // Updates state. Triggers rerender.
                   setDetails(<ServiceDetails service={element.currentmicroservice} setDetails={setDetails} />);
-                  console.log('details selected is: ', detailsSelected);
                 });
               }}
             >

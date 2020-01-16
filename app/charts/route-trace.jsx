@@ -51,7 +51,6 @@ const RouteLocations = (props) => {
     );
   }
 
-  console.log('resArray: ', resArray);
 
 
   // return div with Trace Points data

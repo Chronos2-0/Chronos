@@ -81,7 +81,6 @@ const ServiceDetails = (props) => {
         type="button"
         onClick={() => {
           // document.location.reload()
-          console.log('should clear data');
           setDetails(null);
         }}
       >
