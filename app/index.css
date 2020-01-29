@@ -5,6 +5,10 @@ body {
   background: rgb(25,0,36);
 }
 
+button {
+  border-radius: 3px;
+}
+
 html {
   /* prevent the gradient from repeating past the visible section*/
   min-height: 100%
